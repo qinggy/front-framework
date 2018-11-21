@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>公示板</title>
+  <!--domain css file area-->
+  <!-- <link rel="stylesheet" href="../node_modules/framework-css@0.0.1/fonts/iconfont.css"> -->
+  <link rel="stylesheet" href="../asserts/font_Ali/iconfont.css">
+  <link rel="stylesheet" href="../node_modules/framework-css@0.0.1/dashboard.css">
+  <link rel="stylesheet" href="../node_modules/framework-css@0.0.1/reset.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0-2014.11.23/jquery.blockUI.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
+  <script src="../node_modules/arttemplate@3.0.0/lib/template-web.js"></script>
+  <script src="../asserts/font_ALi/iconfont.js"></script>
+  <!--end css area-->
+  <link rel="stylesheet" href="../node_modules/framework-css@0.0.1/dashboard.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="../asserts/logo.png" alt="logo"></div>
+    <div class="header-right">
+      <div class="theme">万达能源管理平台</div>
+      <iframe name="weather_inc" style='flex: 0 0 351px;' src="http://i.tianqi.com/index.php?c=code&id=48" width="440"
+        height="45" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+      <div class="operate">
+        <i class="iconfont icon-wenhao1"></i>
+        <i class="iconfont icon-quanping1"></i>
+        <!-- <i class="iconfont icon-lingdang">
+          <div class="alarm-number">999</div>
+        </i> -->
+        <div class="operater">
+          <div class="default-portrait"></div>
+          <span class="user-name">友联船厂 ... 吴经理</span>
+          <i class="iconfont icon-arrow-left"></i>
+          <div class="user">
+            <!-- <div class="up-top">
+              <div class="left-nothing"></div>
+              <div class="left-triangle"></div>
+              <div class="right-triangle"></div>
+              <div class="right-nothing"></div>
+            </div> -->
+            <div class="header-place"></div>
+            <div class="out-triangle"></div>
+            <div class="inner-triangle"></div>
+            <div class="user-select">
+              <div class="message" data-id="user"><i class="iconfont icon-gerensvg"></i>个人信息</div>
+              <div class="logout" data-id="logout"><i class="iconfont icon-logout"></i>注销</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="left-tab-menu">
+      <div class="out-tab">
+        <ul id="navigation-content"></ul>
+      </div>
+      <div class="tel">
+        <div>
+          <span>服务电话: </span>
+          <span>400-5875-2587</span>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="head-title">
+        <div>首页</div>
+      </div>
+      <div class="main-content">
+        <div class="home" id="main-content">
+          <iframe src="" id="contentIframe" class="contentIframe" scrolling="no"></iframe>
+        </div>
+        <div class="footer"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<!--domain js file area-->
+<script src="../node_modules/common-domain@0.0.1/framework-conf.js"></script>
+<script src="../node_modules/common-domain@0.0.1/jquery.namespace.js"></script>
+<script src="../node_modules/common-domain@0.0.1/esdpec.common.js"></script>
+<script src="../node_modules/framework-domain@0.0.1/dashboard-domain.js"></script>
+
+<!--end js area-->
+<!-- template area -->
+<script type="text/html" id="navigation-item-template">
+{{if subscribeModuleList.length > 0}}
+{{each subscribeModuleList module index}}
+  <li data-uri="{{module.uri}}" data-name="{{module.name}}" class="{{module.isDefault?'nav-selected':''}}">
+    <div>
+      <i class="iconfont {{module.icon}}"></i>
+      <div class="tab-name">{{module.name}}</div>
+    </div>
+  </li>
+{{/each}}
+{{/if}}
+</script>
+<!-- end template area-->
+
+</html>

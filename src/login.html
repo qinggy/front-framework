@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>登录</title>
+  <!--domain css file area-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70.0-2014.11.23/jquery.blockUI.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-validate/1.18.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery-validate/1.18.0/localization/messages_ar.min.js"></script>
+
+  <!--end css area-->
+  <link rel="stylesheet" href="../node_modules/framework-css@0.0.1/login.css">
+  <link rel="stylesheet" href="../asserts/magic-check.css">
+</head>
+
+<body>
+  <div class="logo"></div>
+  <div class="login_container">
+    <div class="login_header">
+      <i></i>
+      数聚方舟信息管理平台
+    </div>
+    <form class="login_form" id="login_form" method="POST">
+      <div class="userName">
+        <input type="text" id="userName" name="userName" placeholder="请输入帐号">
+      </div>
+      <div class="pwd">
+        <input type="password" id="pwd" name="pwd" placeholder="请输入密码">
+      </div>
+      <div class="login_btn">
+        <input type="submit" id="doLogin" value="登录" />
+      </div>
+      <div class="login_operation">
+        <div class="login_remmber">
+          <input class="magic-checkbox" type="checkbox" name="layout" id="c1">
+          <label for="c1">记住密码</label>
+        </div>
+        <div class="login_forget">
+          <a href="javascript:void(0)">忘记密码?</a>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </form>
+    <form class="forget_pwd_form hide" id="forget_pwd_form" method="POST">
+      <div class="forget_pwd_header">
+        <p>忘记密码</p>
+      </div>
+      <div class="forget_pwd_content">
+        <input id="get_email" name="email" type="text" placeholder="请输入您的邮箱地址重置密码">
+      </div>
+      <div class="forget_pwd_footer">
+        <a class="forget_back" href="javascript:void(0)">返回</a>
+        <input type="submit" id="forget_submit" value="提交">
+      </div>
+    </form>
+  </div>
+  <div class="profile"></div>
+  <div class="footer">
+    <div class="footer_version">
+      <p class="version">当前版本V×××<span class="update_time">(更新于：2018-09-27)</span></p>
+      <div class="update_content">
+        <span class="update_content_title">更新内容：</span>
+        <div class="update_item">
+          <p>1.统计分析模块，增加"报警中心"功能模块，可在此模块中设置报警条件和解除报警，从而对设备的数据监测更简单。</p>
+          <p>2.统计分析增加"我的关注"看板，可快速查表。</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <ul class="applicable_browser">
+      <li>
+        <p>请使用windows7或以上版本操作系统</p>
+      </li>
+      <li>
+        <div class="bottom_tips">
+          <p>建议：使用1366×768以上分辩率屏幕浏览效果更佳</p>
+        </div>
+      </li>
+      <li>
+        <span class="applicable_title">适用浏览器：</span>
+        <i class="chrome_icon"></i>
+        <span>谷歌浏览器</span>
+      </li>
+      <li>
+        <i class="ff_icon"></i>
+        <span>火狐浏览器</span>
+      </li>
+      <li>
+        <i class="icon_360"></i>
+        <span>360浏览器-极速模式<span>
+      </li>
+      <li>服务电话：4000-000-000</li>
+    </ul>
+  </div>
+</body>
+<!--domain js file area-->
+<script src="../node_modules/common-domain@0.0.1/jquery.namespace.js"></script>
+<script src="../node_modules/common-domain@0.0.1/esdpec.common.js"></script>
+<script src="../node_modules/framework-domain@0.0.1/login-domain.js"></script>
+<!--end js area-->
+
+</html>
