@@ -65,7 +65,7 @@
       <div class="tel">
         <div>
           <span>服务电话: </span>
-          <span>400-5875-2587</span>
+          <span>4000-866-365</span>
         </div>
       </div>
     </div>
@@ -83,7 +83,6 @@
   </div>
 </body>
 <!--domain js file area-->
-<script src="../node_modules/common-domain@0.0.1/framework-conf.js"></script>
 <script src="../node_modules/common-domain@0.0.1/jquery.namespace.js"></script>
 <script src="../node_modules/common-domain@0.0.1/esdpec.common.js"></script>
 <script src="../node_modules/framework-domain@0.0.1/dashboard-domain.js"></script>
@@ -103,5 +102,23 @@
 {{/if}}
 </script>
 <!-- end template area-->
+<script type="text/javascript">
+  sessionStorage.setItem('user_token', 'd0fc3599-0a72-4848-aeaa-44ed52e99b48');
+  // sessionStorage.setItem('user_token', $.cookie('Redis_Channel'));
+
+  function initIframeHeight() {
+    var iframe = document.getElementById('contentIframe');
+    var clientHeight = $('#main-content').height();
+    $(iframe).height(clientHeight);
+  }
+
+  window.onload = function () {
+    initIframeHeight();
+  }
+
+  window.onresize = function () {
+    initIframeHeight();
+  }
+</script>
 
 </html>
